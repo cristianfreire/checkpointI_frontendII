@@ -39,50 +39,65 @@
   <div id="modalPokemon" class="modal">
     <!-- Modal content -->
     <div class="modal-content">
-      <span class="close">&times;</span>
-      <h2>Pokémon</h2>
-      <form id="formulario">
-        <div>
-          <label for="nome" class="form-label">Nome</label>
-          <input type="text" id="nome" class="form-control" value="" oninput="validate()" required>
-        </div>
 
 
-        <div>
-          <label for="listaTipos" class="form z-label">Tipo</label>
-          <select id="listaTipos" onchange="validate()" class="form-select form-control">
-            <option value="" selected hidden>Escolha uma opção...</option>
-            <option value="normal">Normal</option>
-            <option value="inseto">Inseto</option>
-            <option value="sombrio">Sombrio</option>
-            <option value="dragao">Dragão</option>
-            <option value="eletrico">Elétrico</option>
-            <option value="fada">Fada</option>
-            <option value="lutador">Lutador</option>
-            <option value="fogo">Fogo</option>
-            <option value="voador">Voador</option>
-            <option value="fantasma">Fantasma</option>
-            <option value="planta">Planta</option>
-            <option value="terrestre">Terrestre</option>
-            <option value="venenoso">Venenoso</option>
-            <option value="gelo">Gelo</option>
-            <option value="psiquico">Psíquico</option>
-            <option value="pedra">Pedra</option>
-            <option value="aco">Aço</option>
-            <option value="agua">Água</option>
-          </select>
-        </div>
 
-        <div>
-          <label for="imagem" class="form-label">Imagem</label>
-          <input type="text" id="imagem" class="form-control" oninput="validate()" value="" required>
-        </div>
+      <div class="modal_form">
+        <h2>Pokémon</h2>
+        <form id="formulario">
+          <div class="itemdoform">
+            <label for="nome" class="form-label">Nome</label>
+            <input type="text" id="nome" class="form-control" value="" oninput="validate()" required>
+          </div>
 
-        <div>
-          <button id="capturar" disabled>Capturar Pokémon</button>
-        </div>
-      </form>
+
+          <div class="itemdoform">
+            <label for="listaTipos" class="form z-label">Tipo</label>
+            <select id="listaTipos" onchange="validate()" class="form-select form-control">
+              <option value="" selected hidden>Escolha uma opção...</option>
+              <option value="normal">Normal</option>
+              <option value="inseto">Inseto</option>
+              <option value="sombrio">Sombrio</option>
+              <option value="dragao">Dragão</option>
+              <option value="eletrico">Elétrico</option>
+              <option value="fada">Fada</option>
+              <option value="lutador">Lutador</option>
+              <option value="fogo">Fogo</option>
+              <option value="voador">Voador</option>
+              <option value="fantasma">Fantasma</option>
+              <option value="planta">Planta</option>
+              <option value="terrestre">Terrestre</option>
+              <option value="venenoso">Venenoso</option>
+              <option value="gelo">Gelo</option>
+              <option value="psiquico">Psíquico</option>
+              <option value="pedra">Pedra</option>
+              <option value="aco">Aço</option>
+              <option value="agua">Água</option>
+            </select>
+          </div>
+
+          <div class="itemdoform">
+            <label for="imagem" class="form-label">Imagem</label>
+            <input type="text" id="imagem" class="form-control" oninput="validate()" value="" required>
+          </div>
+
+          <div>
+            <button id="capturar" disabled>Capturar Pokémon</button>
+            <button id="close" class="close">CANCELAR</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="modal_form2">
+        <img id="imagem_load" src="https://thumbs.gfycat.com/EachWellinformedAidi-size_restricted.gif"
+          alt="imagem pokemon">
+      </div>
+
+      <!--span class="close">&times;</!--span-->
+
     </div>
+
+
   </div>
 
 
