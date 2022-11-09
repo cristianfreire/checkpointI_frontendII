@@ -21,6 +21,7 @@ let span = document.getElementsByClassName("close")[0];
 span.onclick = function () {
   modal.style.display = "none";
   btnAddCard.disabled = true;
+  imagemLoad.src = "https://thumbs.gfycat.com/EachWellinformedAidi-size_restricted.gif";
   formulario.reset();
   
 }
