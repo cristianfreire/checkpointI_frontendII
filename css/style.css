@@ -103,6 +103,12 @@ header {
   height: 215px;
 }
 
+@media (max-width: 700px) {
+  .modal-content {
+    flex-direction: column;
+  }
+}
+
 /* The Close Button */
 /* .close {
   color: #aaa;
