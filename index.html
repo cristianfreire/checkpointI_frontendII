@@ -11,10 +11,30 @@
 </head>
 
 <body>
+  <header>
+    <div class="logo">
+      <img src="https://imagensemoldes.com.br/wp-content/uploads/2020/04/Pokebola-Pok%C3%A9mon-PNG-1024x1022.png"
+        alt="logo pokébola">
+      <h1 class="titulo_site">CAPTURE O SEU POKÉMON</h1>
+    </div>
+
+  </header>
+
+  <main>
+    <div class="container">
+      <!-- Trigger/Open The Modal -->
+      <button id="capturarPokemon">Capturar Pokémon</button>
+    </div>
+
+    <section class="pokemonsCaturados">
+      <h3>MEUS POKÉMONS</h3>
+
+    </section>
+
+  </main>
 
 
-  <!-- Trigger/Open The Modal -->
-  <button id="capturarPokemon">Capturar Pokémon</button>
+
 
   <div id="modalPokemon" class="modal">
     <!-- Modal content -->
@@ -24,16 +44,17 @@
       <form id="formulario">
         <div>
           <label for="nome" class="form-label">Nome</label>
-          <input type="text" id="nome" class="form-control" required>
+          <input type="text" id="nome" class="form-control" value="" oninput="validate()" required>
         </div>
 
 
         <div>
-          <label for="listaItens" class="form z-label">Tipo</label>
-          <select id="listaItens" class="form-select form-control">
-            <option value="default" selected>Normal</option>
+          <label for="listaTipos" class="form z-label">Tipo</label>
+          <select id="listaTipos" onchange="validate()" class="form-select form-control">
+            <option value="" selected hidden>Escolha uma opção...</option>
+            <option value="normal">Normal</option>
             <option value="inseto">Inseto</option>
-            <option value="sobrio">Sombrio</option>
+            <option value="sombrio">Sombrio</option>
             <option value="dragao">Dragão</option>
             <option value="eletrico">Elétrico</option>
             <option value="fada">Fada</option>
@@ -54,15 +75,17 @@
 
         <div>
           <label for="imagem" class="form-label">Imagem</label>
-          <input type="text" id="imagem" class="form-control" required>
+          <input type="text" id="imagem" class="form-control" oninput="validate()" value="" required>
         </div>
 
         <div>
-          <button id="capturar">Capturar Pokémon</button>
+          <button id="capturar" disabled>Capturar Pokémon</button>
         </div>
       </form>
     </div>
   </div>
+
+
 
 
 

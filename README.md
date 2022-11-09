@@ -4,11 +4,11 @@
 
 https://docs.google.com/document/d/16WETFtNOwNKJZj-ySvMutV769lQV1joHdnFs079M61o/edit
 
-// nome ok
+- nome ok
 
-// especie 
-// tipo
- 
-// habilidade
-// fraqueza
-// evolução
+- especie
+- tipo
+
+- habilidade
+- fraqueza
+- evolução
