@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="./js/script.js" defer></script>
+  <title>Home</title>
+</head>
+
+<body>
+
+
+  <!-- Trigger/Open The Modal -->
+  <button id="capturarPokemon">Capturar Pokémon</button>
+
+  <div id="modalPokemon" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Pokémon</h2>
+      <form id="formulario">
+        <div>
+          <label for="nome" class="form-label">Nome</label>
+          <input type="text" id="nome" class="form-control" required>
+        </div>
+
+
+        <div>
+          <label for="listaItens" class="form z-label">Tipo</label>
+          <select id="listaItens" class="form-select form-control">
+            <option value="default" selected>Normal</option>
+            <option value="inseto">Inseto</option>
+            <option value="sobrio">Sombrio</option>
+            <option value="dragao">Dragão</option>
+            <option value="eletrico">Elétrico</option>
+            <option value="fada">Fada</option>
+            <option value="lutador">Lutador</option>
+            <option value="fogo">Fogo</option>
+            <option value="voador">Voador</option>
+            <option value="fantasma">Fantasma</option>
+            <option value="planta">Planta</option>
+            <option value="terrestre">Terrestre</option>
+            <option value="venenoso">Venenoso</option>
+            <option value="gelo">Gelo</option>
+            <option value="psiquico">Psíquico</option>
+            <option value="pedra">Pedra</option>
+            <option value="aco">Aço</option>
+            <option value="agua">Água</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="imagem" class="form-label">Imagem</label>
+          <input type="text" id="imagem" class="form-control" required>
+        </div>
+
+        <div>
+          <button id="capturar">Capturar Pokémon</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+
+
+</body>
+
+</html>
