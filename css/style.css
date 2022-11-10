@@ -1,14 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Holtwood+One+SC&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-family: "Holtwood One SC", serif;
 }
 
 html {
   font-size: 16px;
+  font-family: "Holtwood One SC", serif;
 }
 
 body {
@@ -101,10 +101,70 @@ header {
 .modal_form2 img {
   width: 215px;
   height: 215px;
+  padding: 0;
+  margin: 0;
 }
 
 .pokemonsCaturados img {
   width: 300px;
+}
+
+.card {
+  position: absolute;
+  top: 300px;
+  z-index: -1;
+}
+
+.linha {
+  width: 140px;
+  height: 0;
+  border: 1px solid white;
+}
+
+.card_content {
+  background-color: #73b6d3;
+  font-family: "Press Start 2P", cursive;
+  font-size: small;
+  position: absolute;
+  z-index: 1;
+  top: 170px;
+  left: 10px;
+
+  width: 280px;
+  height: 250px;
+
+  padding: 10px;
+}
+
+.card_content__titulo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  flex-direction: column;
+  color: #000;
+}
+
+.card_content__info {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  color: #000;
+}
+
+.card_content__info img {
+  width: 100px;
+  height: auto;
+}
+.card_content__info_tipo {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+}
+
+.card_content__info_tipo img {
+  width: 15px;
 }
 
 @media (max-width: 700px) {
