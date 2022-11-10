@@ -4,6 +4,7 @@ let modal = document.getElementById("modalPokemon");
 let btnAbrirModal = document.getElementById("capturarPokemon");
 let btnAddCard = document.getElementById("capturar");
 let nomePokemon = document.getElementById("nome");
+let descricaoPokemon = document.getElementById("descricao");
 let tipoPokemon = document.getElementById("listaTipos");
 let imagemPokemon = document.getElementById("imagem");
 const formulario = document.getElementById("formulario");
@@ -30,13 +31,15 @@ span.onclick = function () {
 // window.onclick = function (event) {
 //   if (event.target == modal) {
 //     modal.style.display = "none";
-    
+
 //   }
 // }
 
 // ---------- validação do form --------
 function validate(){
-  if(nomePokemon.value != "" && tipoPokemon.value != "" && imagemPokemon.value != ""){
+  let nome = nomePokemon.value;
+  let descricao = descricaoPokemon.value;
+  if(nome != "" && nome.length >= 4 && descricao != "" && descricao.length >= 4 && tipoPokemon.value != "" && imagemPokemon.value != ""){
     btnAddCard.disabled = false;
     imagemLoad.src = imagemPokemon.value;
 
