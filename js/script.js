@@ -17,6 +17,8 @@ const cardImage = document.getElementById("card_img");
 const cardDescricao = document.getElementById("card_descricao");
 const cardImagemTipo = document.getElementById("card_img_tipo");
 const cardTipo = document.getElementById("card_tipo");
+const proximo = document.getElementById("next");
+const anterior = document.getElementById("previous");
 
 
 // mostrar o modal
@@ -63,6 +65,7 @@ function validate(){
   }else{
     if(imagemPokemon.value != ""){
       imagemLoad.src = imagemPokemon.value;
+
     }
    
     btnAddCard.disabled = true;
@@ -93,14 +96,8 @@ formulario.addEventListener('submit', e =>{
 
 function adicionarCard(){
   cardContent.hidden = false;
-  cardNome.innerHTML = pokemons[0].nome;
-  cardImage.src = pokemons[0].imagem;
-  cardDescricao.innerHTML = pokemons[0].descricao;
-  CardImagemTipo(0);
-  let cardtipo = pokemons[0].tipo;
-  cardTipo.innerHTML = cardtipo[0].toUpperCase() + cardtipo.substring(1);
-
   fecharModal();
+  exibirItens(0);
 }
 
 function CardImagemTipo(posicao){
@@ -143,12 +140,59 @@ function CardImagemTipo(posicao){
   }
 }
 
+let contador = 0;
+
+// ------------- proximo e next
+proximo.onclick = function(){
+  if(pokemons.length > 1 && contador==0){  
+    contador++;
+    exibirItens(contador);
+  }else if(contador > 0){
+    contador++;
+    if(contador == pokemons.length){
+      contador=0;
+      exibirItens(contador);
+    }else{
+      exibirItens(contador);
+    }
+  }
+}
+
+
+
+anterior.onclick = function(){
+  if(pokemons.length > 1 && contador==0){  
+    contador++;
+    exibirItens(contador);
+  }else if(contador > 0){
+    contador++;
+    if(contador == pokemons.length){
+      contador=0;
+      exibirItens(contador);
+    }else{
+      exibirItens(contador);
+    }
+  }
+}
+
+function exibirItens(posicao){
+  cardNome.innerHTML = pokemons[posicao].nome;
+  cardImage.src = pokemons[posicao].imagem;
+  cardDescricao.innerHTML = pokemons[posicao].descricao;
+  CardImagemTipo(posicao);
+  let cardtipo = pokemons[posicao].tipo;
+  cardTipo.innerHTML = cardtipo[0].toUpperCase() + cardtipo.substring(1);
+
+}
+
 
 // --------------- tratamento de imagem
 
 imagemLoad.onerror = function(){
   imagemLoad.src = "https://media.istockphoto.com/id/1416208685/vector/no-image-vector-symbol-missing-available-icon-no-gallery-for-this-moment-placeholder.jpg?b=1&s=170667a&w=0&k=20&c=Wa2XQXJhwu9JFfSMz55HQzuudj32yIZ6jC33icNCacg="
   btnAddCard.disabled = true;
+  btnAddCard.classList.remove('capturar2');
+  btnAddCard.classList.add('capturar');
 }
 
 
