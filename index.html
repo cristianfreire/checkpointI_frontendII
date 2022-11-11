@@ -13,23 +13,27 @@
 <body>
   <header>
     <div class="logo">
-      <img src="https://imagensemoldes.com.br/wp-content/uploads/2020/04/Pokebola-Pok%C3%A9mon-PNG-1024x1022.png"
-        alt="logo pokébola">
-      <h1 class="titulo_site">CAPTURE O SEU POKÉMON</h1>
+      <h1 class="titulo_site">pokedéx</h1>
     </div>
 
   </header>
 
   <main>
-    <div class="container">
-      <!-- Trigger/Open The Modal -->
-      <button id="capturarPokemon">Capturar Pokémon</button>
-    </div>
 
+    <div class="container">
+      <!-- btnAdd pokemon -->
+      <div id="capturarPokemon" class="btnAddPokemon">
+        <!-- Trigger/Open The Modal -->
+        <img id="btnImageCaptura"
+          src="https://imagensemoldes.com.br/wp-content/uploads/2020/04/Pokebola-Pok%C3%A9mon-PNG-1024x1022.png"
+          alt="logo pokébola">
+        <h3>CAPTURE O SEU POKEMON</h3>
+        <!--button id="capturarPokemon">Capturar Pokémon</button-->
+      </div>
+    </div>
+    <!--   pokedex -->
     <section class="pokemonsCaturados">
       <!--h3>pokédex</h3-->
-
-
       <div class="card">
         <img src="./img/pokedex.png" alt="">
 
@@ -59,6 +63,8 @@
       </div>
 
     </section>
+
+
 
   </main>
 
@@ -114,8 +120,8 @@
           </div>
 
           <div>
-            <button id="capturar" disabled>Capturar Pokémon</button>
-            <button id="close" class="close">CANCELAR</button>
+            <button class="btn-green-qa" id="capturar" disabled>Capturar Pokémon</button>
+            <button class="btn-red-qa" id="close" class="close">CANCELAR</button>
           </div>
         </form>
       </div>

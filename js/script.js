@@ -9,6 +9,7 @@ const tipoPokemon = document.getElementById("listaTipos");
 const imagemPokemon = document.getElementById("imagem");
 const formulario = document.getElementById("formulario");
 const imagemLoad = document.getElementById("imagem_load");
+const btnImage = document.getElementById("btnImageCaptura")
 
 const cardNome = document.getElementById("card_nome");
 const cardContent = document.getElementById("card_content");
@@ -30,6 +31,7 @@ span.onclick = function () {
  fecharModal();
   
 }
+
 
 function fecharModal(){
   modal.style.display = "none";
@@ -143,4 +145,7 @@ imagemLoad.onerror = function(){
   imagemLoad.src = "https://media.istockphoto.com/id/1416208685/vector/no-image-vector-symbol-missing-available-icon-no-gallery-for-this-moment-placeholder.jpg?b=1&s=170667a&w=0&k=20&c=Wa2XQXJhwu9JFfSMz55HQzuudj32yIZ6jC33icNCacg="
   btnAddCard.disabled = true;
 }
+
+
+
 
