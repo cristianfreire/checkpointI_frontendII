@@ -164,6 +164,13 @@ header {
   justify-content: space-around;
 }
 
+.card_content__info_tipo p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
 .card_content__info_tipo img {
   width: 20px;
 }

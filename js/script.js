@@ -89,13 +89,51 @@ function adicionarCard(){
   cardNome.innerHTML = pokemons[0].nome;
   cardImage.src = pokemons[0].imagem;
   cardDescricao.innerHTML = pokemons[0].descricao;
-  //imagemTipo
+  CardImagemTipo(0);
   let cardtipo = pokemons[0].tipo;
   cardTipo.innerHTML = cardtipo[0].toUpperCase() + cardtipo.substring(1);
 
   fecharModal();
-  
+}
 
+function CardImagemTipo(posicao){
+  if(pokemons[posicao].tipo == "normal"){
+    cardImagemTipo.src = "./img/tipo/normal.png"
+  }else if(pokemons[posicao].tipo == "inseto"){
+    cardImagemTipo.src = "./img/tipo/inseto.png";
+  }else if(pokemons[posicao].tipo == "sombrio"){
+    cardImagemTipo.src = "./img/tipo/dark.png";
+  }else if(pokemons[posicao].tipo == "dragao"){
+    cardImagemTipo.src = "./img/tipo/dragon.png";
+  }else if(pokemons[posicao].tipo == "eletrico"){
+    cardImagemTipo.src = "./img/tipo/eletric.png";
+  }else if(pokemons[posicao].tipo == "fada"){
+    cardImagemTipo.src = "./img/tipo/fairy.png";
+  }else if(pokemons[posicao].tipo == "lutador"){
+    cardImagemTipo.src = "./img/tipo/fighting.png";
+  }else if(pokemons[posicao].tipo == "fogo"){
+    cardImagemTipo.src = "./img/tipo/fire.png";
+  }else if(pokemons[posicao].tipo == "voador"){
+    cardImagemTipo.src = "./img/tipo/flying.png";
+  }else if(pokemons[posicao].tipo == "fantasma"){
+    cardImagemTipo.src = "./img/tipo/ghost.png";
+  }else if(pokemons[posicao].tipo == "planta"){
+    cardImagemTipo.src = "./img/tipo/grass.png";
+  }else if(pokemons[posicao].tipo == "terrestre"){
+  cardImagemTipo.src = "./img/tipo/ground.png";
+  }else if(pokemons[posicao].tipo == "venenoso"){
+    cardImagemTipo.src = "./img/tipo/poison.png";
+  }else if(pokemons[posicao].tipo == "gelo"){
+    cardImagemTipo.src = "./img/tipo/ice.png";
+  }else if(pokemons[posicao].tipo == "psiquico"){
+    cardImagemTipo.src = "./img/tipo/Psychic.png";
+  }else if(pokemons[posicao].tipo == "pedra"){
+    cardImagemTipo.src = "./img/tipo/rock.png";
+  }else if(pokemons[posicao].tipo == "aco"){
+    cardImagemTipo.src = "./img/tipo/steel.png";
+  }else if(pokemons[posicao].tipo == "agua"){
+    cardImagemTipo.src = "./img/tipo/water.png";
+  }
 }
 
 
