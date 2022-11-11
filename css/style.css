@@ -120,6 +120,65 @@ header {
   width: 300px;
 }
 
+.botoes {
+  margin-top: 10px;
+}
+
+.capturar {
+  border: none;
+  padding: 10px;
+  text-decoration: none;
+  transition: background 0.3s;
+  border-radius: 5px;
+  outline: none;
+  font-family: Arial, helvetica, sans-serif;
+  font-size: 100%;
+  font-weight: 600;
+
+  background-color: #bdbdbd;
+  color: #fff;
+}
+
+.capturar2 {
+  border: none;
+  padding: 10px;
+  text-decoration: none;
+  transition: background 0.3s;
+  cursor: pointer;
+  border-radius: 5px;
+  outline: none;
+  font-family: Arial, helvetica, sans-serif;
+  font-size: 100%;
+  font-weight: 600;
+
+  background-color: #7cbf0f;
+  color: #fff;
+}
+
+.capturar2:hover {
+  background-color: #89c920;
+}
+
+.close {
+  border: none;
+  padding: 10px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.3s;
+  border-radius: 5px;
+  outline: none;
+  font-family: Arial, helvetica, sans-serif;
+  font-size: 100%;
+  font-weight: 600;
+
+  background-color: #c44d40;
+  color: #fff;
+}
+
+.close:hover {
+  background-color: rgb(255, 0, 0);
+}
+
 .card {
   position: absolute;
   top: 200px;
@@ -209,6 +268,7 @@ header {
 
 /* button add pokemon */
 .btnAddPokemon {
+  cursor: pointer;
   display: inline-block;
   text-align: center;
   border-width: 1px;
@@ -326,6 +386,5 @@ header {
   background-image: linear-gradient(top, #649a0c 0%, #73b10e 100%);
   padding: 7px 15px 5px 15px;
 }
-
 
 /*buttons add e cancelar */

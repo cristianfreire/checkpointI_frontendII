@@ -37,6 +37,8 @@ function fecharModal(){
   modal.style.display = "none";
   btnAddCard.disabled = true;
   imagemLoad.src = "https://thumbs.gfycat.com/EachWellinformedAidi-size_restricted.gif";
+  btnAddCard.classList.remove('capturar2');
+  btnAddCard.classList.add('capturar');
   formulario.reset();
 }
 
@@ -54,12 +56,15 @@ function validate(){
   let descricao = descricaoPokemon.value;
   if(nome != "" && nome.length >= 4 && descricao != "" && descricao.length >= 4 && tipoPokemon.value != "" && imagemPokemon.value != ""){
     btnAddCard.disabled = false;
+    btnAddCard.classList.remove('capturar');
+    btnAddCard.classList.add('capturar2');
     imagemLoad.src = imagemPokemon.value;
 
   }else{
     if(imagemPokemon.value != ""){
       imagemLoad.src = imagemPokemon.value;
     }
+   
     btnAddCard.disabled = true;
   }
 }
@@ -108,7 +113,7 @@ function CardImagemTipo(posicao){
   }else if(pokemons[posicao].tipo == "dragao"){
     cardImagemTipo.src = "./img/tipo/dragon.png";
   }else if(pokemons[posicao].tipo == "eletrico"){
-    cardImagemTipo.src = "./img/tipo/eletric.png";
+    cardImagemTipo.src = "./img/tipo/electric.png";
   }else if(pokemons[posicao].tipo == "fada"){
     cardImagemTipo.src = "./img/tipo/fairy.png";
   }else if(pokemons[posicao].tipo == "lutador"){
