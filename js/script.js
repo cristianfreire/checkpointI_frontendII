@@ -144,6 +144,7 @@ let contador = 0;
 
 // ------------- proximo e next
 proximo.onclick = function(){
+
   if(pokemons.length > 1 && contador==0){  
     contador++;
     exibirItens(contador);
@@ -156,24 +157,32 @@ proximo.onclick = function(){
       exibirItens(contador);
     }
   }
+
+  //console.log(contador);
 }
-
-
 
 anterior.onclick = function(){
-  if(pokemons.length > 1 && contador==0){  
-    contador++;
-    exibirItens(contador);
-  }else if(contador > 0){
-    contador++;
-    if(contador == pokemons.length){
-      contador=0;
-      exibirItens(contador);
+  if(pokemons.length == 2){  
+    if(contador == 0){
+      contador++;
+      exibirItens(pokemons.length-contador);
     }else{
+      contador = 0;
+      exibirItens(contador);
+    }
+       
+  }else if(pokemons.length > 2){
+    if(contador == 0){
+      contador = pokemons.length-1;
+      exibirItens(contador);
+    }else if(contador > 0){
+      contador--;
       exibirItens(contador);
     }
   }
 }
+  //console.log(contador);
+
 
 function exibirItens(posicao){
   cardNome.innerHTML = pokemons[posicao].nome;
