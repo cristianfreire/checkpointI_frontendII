@@ -88,18 +88,20 @@
         <h2>Pokémon</h2>
         <form id="formulario">
           <div class="itemdoform">
-            <label for="nome" class="form-label">Nome</label>
-            <input type="text" id="nome" class="form-control" value="" oninput="validate()" required>
+            <label for="nome" class="form-label">Nome *</label>
+            <input type="text" id="nome" class="form-control" placeholder="mínimo 4 caractéres" value=""
+              oninput="validate()" required>
           </div>
 
           <div class="itemdoform">
-            <label for="descricao" class="form-label">Descrição</label>
-            <input type="text" id="descricao" class="form-control" value="" oninput="validate()" required>
+            <label for="descricao" class="form-label">Descrição *</label>
+            <input type="text" id="descricao" class="form-control" placeholder="mínimo 4 caractéres" value=""
+              oninput="validate()" required>
           </div>
 
 
           <div class="itemdoform">
-            <label for="listaTipos" class="form z-label">Tipo</label>
+            <label for="listaTipos" class="form z-label">Tipo *</label>
             <select id="listaTipos" onchange="validate()" class="form-select form-control">
               <option value="" selected hidden>Escolha uma opção...</option>
               <option value="normal">Normal</option>
@@ -124,7 +126,7 @@
           </div>
 
           <div class="itemdoform">
-            <label for="imagem" class="form-label">Imagem</label>
+            <label for="imagem" class="form-label">Imagem *</label>
             <input type="text" id="imagem" class="form-control" oninput="validate()" value="" required>
           </div>
 
