@@ -90,6 +90,12 @@ formulario.addEventListener('submit', e =>{
     pokemons.push(pokemon);
 
     adicionarCard();
+  
+   swal({
+      title: "Bom Trabalho!",
+      text: "Great Pokémon Captured",
+      icon: "success",
+    });
     
 });
 
